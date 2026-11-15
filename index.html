@@ -154,7 +154,7 @@
         .feature-item h3 { font-size:1.1rem; color:var(--text-dark); }
 
         /* ---------- Products ---------- */
-        .products-section { padding:70px 5%; max-width:1400px; margin:0 auto; }
+        .products-section { padding:70px 5% 30px; max-width:1400px; margin:0 auto; }
         .section-header { text-align:center; margin-bottom:45px; }
         .section-header h2 {
             font-size:2.3rem; color:#fff; background:var(--primary-green);
@@ -174,7 +174,6 @@
             color:#fff; padding:5px 32px; transform:rotate(45deg);
             font-size:12px; font-weight:700; z-index:10; box-shadow:0 2px 6px rgba(0,0,0,.2);
         }
-        /* object-fit: contain দেওয়া হয়েছে যাতে ছবি কেটে না যায় */
         .product-img { width:100%; height:250px; object-fit:contain; background-color: #fff; border-bottom:1px solid #eee; padding: 10px; }
         .product-info { padding:25px 20px; text-align:center; }
         .product-title { font-size:1.2rem; font-weight:700; margin-bottom:10px; color:var(--text-dark); }
@@ -191,6 +190,21 @@
             display: flex; justify-content: center; align-items: center; gap: 8px;
         }
         .btn-order:hover { background: var(--dark-green); transform: scale(1.02); }
+
+        /* ---------- GI Certificate Section ---------- */
+        .gi-certificate-section {
+            text-align: center;
+            padding: 20px 5% 70px;
+            background: var(--bg-cream);
+        }
+        .gi-certificate-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            border: 5px solid #fff;
+        }
 
         /* ---------- Testimonials ---------- */
         .testimonials { padding:70px 5%; background:#fff; }
@@ -340,11 +354,23 @@
             border-radius: 8px; border: 1px solid #eee;
         }
         .captcha-math { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); }
+        
+        /* ক্যাপচা ইনপুট ঠিক করা হয়েছে */
         .captcha-input {
-            width: 80px; padding: 8px; border: 1px solid #ccc; border-radius: 6px;
-            text-align: center; font-size: 1rem; outline: none;
+            width: 100px; 
+            padding: 10px; 
+            border: 2px solid #ccc; /* বর্ডার আরও স্পষ্ট করা হয়েছে */
+            border-radius: 6px;
+            text-align: center; 
+            font-size: 1rem; 
+            outline: none;
+            background-color: #fff;
+            z-index: 10;
         }
-        .captcha-input:focus { border-color: var(--primary-green); }
+        .captcha-input:focus { 
+            border-color: var(--primary-green); 
+            box-shadow: 0 0 5px rgba(27,94,32,.2);
+        }
         
         .btn-submit-order {
             width: 100%; padding: 15px; background: var(--primary-green); color: #fff;
@@ -406,7 +432,7 @@
         <span><i class="fa-solid fa-shield-halved"></i> ১০০% খাঁটি ও প্রাকৃতিক</span>
         <span><i class="fa-solid fa-leaf"></i> কোনো রাসায়নিক নেই</span>
         <span><i class="fa-solid fa-car-side"></i> সারা দেশে ডেলিভারি</span>
-        <span><i class="fa-solid fa-phone"></i> ০১৯১৫৯৭৮৩৮৭</span>
+        <span><i class="fa-solid fa-phone"></i> ০১৭xx-xxxxxx</span>
     </div>
 
     <!-- Header -->
@@ -484,6 +510,11 @@
         <div class="product-grid" id="productGrid"></div>
     </section>
 
+    <!-- GI Certificate Section -->
+    <section class="gi-certificate-section reveal">
+        <img src="https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/Bangladesh_GI_Journal_Certificate_Cover.png" alt="GI Certificate">
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials reveal" id="about">
         <div class="section-header"><h2>গ্রাহকদের মতামত</h2></div>
@@ -511,10 +542,10 @@
         <h2>অর্ডার করুন এখনই</h2>
         <p>হোয়াটসঅ্যাপ বা ফোনে সরাসরি অর্ডার করুন — দ্রুত ডেলিভারি!</p>
         <div class="contact-buttons">
-            <a href="https://wa.me/8801626868084" target="_blank" class="contact-btn whatsapp">
+            <a href="https://wa.me/88017XXXXXXXX" target="_blank" class="contact-btn whatsapp">
                 <i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপে অর্ডার
             </a>
-            <a href="tel:+8801915978387" class="contact-btn call">
+            <a href="tel:+88017XXXXXXXX" class="contact-btn call">
                 <i class="fa-solid fa-phone"></i> কল করুন
             </a>
         </div>
@@ -541,9 +572,9 @@
             </div>
             <div class="footer-col">
                 <h4>যোগাযোগ</h4>
-                <p><i class="fa-solid fa-phone"></i> ০১৫৩৫৮৯৬৫৭৭</p>
-                <p><i class="fa-solid fa-envelope"></i> anis5746279@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> ময়মনসিংহ , বাংলাদেশ</p>
+                <p><i class="fa-solid fa-phone"></i> ০১৭xx-xxxxxx</p>
+                <p><i class="fa-solid fa-envelope"></i> info@villageitem.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> ঢাকা, বাংলাদেশ</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -651,7 +682,8 @@
                     <label>নিরাপত্তা যাচাই (Bot Protection):</label>
                     <div class="bot-protection">
                         <span class="captcha-math" id="captchaQuestion">৫ + ৯ =</span>
-                        <input type="number" id="captchaAnswer" class="captcha-input" placeholder="উত্তর" required>
+                        <!-- ক্যাপচা ইনপুটে ক্লিক এবং টাইপ ঠিক করা হয়েছে -->
+                        <input type="number" id="captchaAnswer" class="captcha-input" placeholder="উত্তর" required autocomplete="off">
                     </div>
                 </div>
                 
@@ -664,10 +696,10 @@
 
     <script>
         const products = [
-            { id:1, title:'আখের পাকা রস (১ কেজি)', old:350, price:330, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_ros_2.png' },
-            { id:2, title:'আখের গুড়ের পাঠালি (১ কেজি)', old:300, price:260, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_guree_patha.jpg' },
-            { id:3, title:'আখের গুড়ের কাঠা (৫ কেজি)', old:1400, price:1300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/pathali_gur.jpg' },
-            { id:4, title:'আখের লাল চিনি (১ কেজি)', old:300, price:250, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/lala_chini.jpg' },
+            { id:1, title:'খেজুরের গুড় (১ কেজি)', old:1400, price:1000, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_ros_2.png' },
+            { id:2, title:'আখের গুড়ের কাঠা (৫ কেজি)', old:2000, price:1250, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_guree_patha.jpg' },
+            { id:3, title:'আখের গুড়ের পাটালি (১ কেজি)', old:450, price:300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/pathali_gur.jpg' },
+            { id:4, title:'আখের পাউডার গুড় (১ কেজি)', old:450, price:300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/lala_chini.jpg' },
         ];
 
         const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
@@ -899,6 +931,9 @@
                 generateCaptcha();
                 return;
             }
+
+            // ধন্যবাদ বার্তা
+            alert('আমাদের পেইজ থেকে অর্ডার করার জন্য আপনাকে অসংখ্য ধন্যবাদ!');
 
             const myPhone = '88017XXXXXXXX'; // <-- এখানে আপনার হোয়াটসঅ্যাপ নম্বরটি দিন
             
