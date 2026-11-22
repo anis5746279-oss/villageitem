@@ -526,7 +526,7 @@
             
             <h1>ঐতিহ্যবাহী লাল চিনি <span>ময়মনসিংহের ফুলবাড়িয়া (GI পণ্য)</span></h1>
             
-            <div class="hero-sub-heading">লাল চিনি ও আখের গুড়</div>
+            <div class="hero-sub-heading">লাল চিনি ও আখের গুড়</div>
             
             <p>সুস্থ থাকুন, দেশীয় পণ্য ব্যবহার করুন। ১০০% খাঁটি ও প্রাকৃতিক।</p>
             
@@ -986,10 +986,35 @@
                 return;
             }
 
+            // ==========================================
+            // Google Sheet-এ ডেটা পাঠানোর কোড (নতুন URL যুক্ত করা হয়েছে)
+            // ==========================================
+            const sheetURL = "https://script.google.com/macros/s/AKfycbzPKjOr7bq39RximjC4MBmrPVTJIoMfCnBG6Q-i7Rt-_6_cBnY6JRfh0KaUYS5DZgDG/exec";
+            
+            const sheetData = new URLSearchParams();
+            sheetData.append("name", name);
+            sheetData.append("phone", phone);
+            sheetData.append("division", division);
+            sheetData.append("district", district);
+            sheetData.append("upazila", upazila);
+            sheetData.append("address", address);
+            sheetData.append("product", selectedProduct.name);
+            sheetData.append("price", selectedProduct.price);
+            sheetData.append("paymentMethod", currentPaymentMethod);
+            sheetData.append("trxId", trxId || "");
+
+            fetch(sheetURL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: sheetData
+            }).catch(err => console.error("Sheet-এ পাঠানো ব্যর্থ:", err));
+            // ==========================================
+
             // ধন্যবাদ বার্তা
             alert('আমাদের পেইজ থেকে অর্ডার করার জন্য আপনাকে অসংখ্য ধন্যবাদ!');
 
-            const myPhone = '8801535896577'; // <-- এখানে আপনার হোয়াটসঅ্যাপ নম্বরটি দেওয়া হয়েছে
+            const myPhone = '8801535896577'; // <-- আপনার হোয়াটসঅ্যাপ নম্বর
             
             let message = `আসসালামু আলাইকুম, আমি অর্ডার করতে চাই:\n\n` +
                             `🛒 *পণ্য:* ${selectedProduct.name}\n` +
