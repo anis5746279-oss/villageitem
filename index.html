@@ -193,7 +193,31 @@
         .feature-item h3 { font-size:1.1rem; color:var(--text-dark); }
 
         /* ---------- Products ---------- */
-        .products-section { padding:70px 5% 30px; max-width:1400px; margin:0 auto; }
+        .products-section { padding:50px 5% 30px; max-width:1400px; margin:0 auto; }
+        
+        /* ডেলিভারি চার্জ নোটিশ স্টাইল */
+        .delivery-notice-box {
+            text-align: center;
+            margin-bottom: 25px;
+            background: #fff8e1;
+            border: 2px dashed #d4a017;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .delivery-notice-box p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #8b3a00;
+            margin: 0;
+        }
+        .delivery-notice-box i {
+            color: #d4a017;
+            margin-right: 5px;
+        }
+
         .section-header { text-align:center; margin-bottom:45px; }
         .section-header h2 {
             font-size:2.3rem; color:#fff; background:var(--primary-green);
@@ -464,6 +488,7 @@
             .contact-buttons { flex-direction:column; align-items:stretch; }
             .contact-btn { justify-content:center; }
             .form-row { flex-direction: column; gap: 0; }
+            .delivery-notice-box p { font-size: 1rem; }
         }
     </style>
 </head>
@@ -472,11 +497,11 @@
     <!-- Fixed Contact Icons (সবসময় থাকবে) -->
     <div class="floating-contact">
         <!-- হোয়াটসঅ্যাপ -->
-        <a href="https://wa.me/8801535896577" target="_blank" class="float-whatsapp" title="WhatsApp Us">
+        <a href="https://wa.me/8801915978387" target="_blank" class="float-whatsapp" title="WhatsApp Us">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <!-- কল -->
-        <a href="tel:01915978387" class="float-call" title="Call Us">
+        <a href="tel:01535896577" class="float-call" title="Call Us">
             <i class="fa-solid fa-phone"></i>
         </a>
     </div>
@@ -558,6 +583,12 @@
 
     <!-- Products -->
     <section class="products-section" id="products">
+        <!-- ডেলিভারি চার্জ নোটিশ শুরু -->
+        <div class="delivery-notice-box reveal">
+            <p><i class="fa-solid fa-truck-fast"></i> প্রথম প্রতি কেজি ডেলিভারি চার্জ ১২০ টাকা। এরপর প্রতি কেজিতে মাত্র ২০ টাকা যোগ হবে (সারা দেশে ডেলিভারি)।</p>
+        </div>
+        <!-- ডেলিভারি চার্জ নোটিশ শেষ -->
+        
         <div class="section-header">
             <h2>আমাদের পণ্য সমূহ</h2>
         </div>
@@ -575,12 +606,12 @@
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p>"গুড়ের স্বাদ একেবারে আসল। পরিবারের সবাই খুব পছন্দ করেছে। আবার অর্ডার করব।"</p>
+                <p>"আখের লাল চিনি একেবারে আসল। পরিবারের সবাই খুব পছন্দ করেছে। আবার অর্ডার করব।"</p>
                 <div class="testimonial-author">— রহিমা বেগম, ঢাকা</div>
             </div>
             <div class="testimonial-card">
                 <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p>"খেজুরের গুড় সত্যিই খাঁটি। প্যাকেজিংও সুন্দর ছিল, দ্রুত ডেলিভারি পেয়েছি।"</p>
+                <p>"আখের রস সত্যিই খাঁটি। প্যাকেজিংও সুন্দর ছিল, দ্রুত ডেলিভারি পেয়েছি।"</p>
                 <div class="testimonial-author">— করিম সাহেব, চট্টগ্রাম</div>
             </div>
             <div class="testimonial-card">
@@ -596,10 +627,10 @@
         <h2>অর্ডার করুন এখনই</h2>
         <p>হোয়াটসঅ্যাপ বা ফোনে সরাসরি অর্ডার করুন — দ্রুত ডেলিভারি!</p>
         <div class="contact-buttons">
-            <a href="https://wa.me/8801535896577" target="_blank" class="contact-btn whatsapp">
+            <a href="https://wa.me/8801915978387" target="_blank" class="contact-btn whatsapp">
                 <i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপে অর্ডার
             </a>
-            <a href="tel:+8801915978387" class="contact-btn call">
+            <a href="tel:01535896577" class="contact-btn call">
                 <i class="fa-solid fa-phone"></i> কল করুন
             </a>
         </div>
@@ -750,10 +781,10 @@
 
     <script>
         const products = [
-            { id:1, title:'খেজুরের গুড় (১ কেজি)', old:1400, price:1000, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_ros_2.png' },
+            { id:1, title:'আখের রস (১ কেজি)', old:350, price:300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_ros_2.png' },
             { id:2, title:'আখের গুড়ের কাঠা (৫ কেজি)', old:2000, price:1250, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/akher_guree_patha.jpg' },
             { id:3, title:'আখের গুড়ের পাটালি (১ কেজি)', old:450, price:300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/pathali_gur.jpg' },
-            { id:4, title:'আখের পাউডার গুড় (১ কেজি)', old:450, price:300, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/lala_chini.jpg' },
+            { id:4, title:'আখের লাল চিনি (১ কেজি)', old:300, price:250, img:'https://raw.githubusercontent.com/anis5746279-oss/villageitem/main/lala_chini.jpg' },
         ];
 
         const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
@@ -987,7 +1018,7 @@
             }
 
             // ==========================================
-            // Google Sheet-এ ডেটা পাঠানোর কোড (নতুন URL যুক্ত করা হয়েছে)
+            // Google Sheet-এ ডেটা পাঠানোর কোড
             // ==========================================
             const sheetURL = "https://script.google.com/macros/s/AKfycbzPKjOr7bq39RximjC4MBmrPVTJIoMfCnBG6Q-i7Rt-_6_cBnY6JRfh0KaUYS5DZgDG/exec";
             
@@ -1014,7 +1045,7 @@
             // ধন্যবাদ বার্তা
             alert('আমাদের পেইজ থেকে অর্ডার করার জন্য আপনাকে অসংখ্য ধন্যবাদ!');
 
-            const myPhone = '8801535896577'; // <-- আপনার হোয়াটসঅ্যাপ নম্বর
+            const myPhone = '8801915978387'; // <-- আপনার হোয়াটসঅ্যাপ নম্বর
             
             let message = `আসসালামু আলাইকুম, আমি অর্ডার করতে চাই:\n\n` +
                             `🛒 *পণ্য:* ${selectedProduct.name}\n` +
